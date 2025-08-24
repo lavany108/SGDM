@@ -1,0 +1,51 @@
+/* Animated background gradient */
+.bg-animated {
+  background: linear-gradient(120deg, #0ea5e9 0%, #8b5cf6 35%, #22c55e 70%, #f59e0b 100%);
+  background-size: 300% 300%;
+  animation: gradientShift 18s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+/* Glassmorphism card */
+.glass {
+  background: rgba(255,255,255,0.14);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+
+
+/* Parallax video container fix for iOS */
+.parallax {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.parallax video {
+  transform: translateZ(-1px) scale(2);
+}
+
+/* Simple confetti */
+.confetti {
+  position: fixed;
+  pointer-events: none;
+  inset: 0;
+  z-index: 60;
+}
+
+.faq-container {
+  border: 2px solid black; /* Black border */
+  border-radius: 10px; /* Rounded corners (optional) */
+  padding: 20px; /* Space inside */
+  margin: 20px auto; /* Center with spacing */
+  max-width: 800px; /* Keep FAQ neat */
+}
+
+html { scroll-behavior: smooth; }
